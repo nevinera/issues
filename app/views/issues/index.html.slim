@@ -2,3 +2,9 @@
   pre= auth_data.to_yaml
 - else
   p not logged in
+
+
+ul
+  - @commits.each do |commit|
+    li
+      pre= commit.to_yaml

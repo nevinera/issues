@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'thin'
 gem 'sqlite3'
 
+gem 'github_api'
 
 # Gems used only for assets and not required
 # in production environments by default.
