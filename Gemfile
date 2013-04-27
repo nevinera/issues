@@ -18,3 +18,4 @@ gem 'slim'
 
 gem 'jquery-rails'
 gem 'omniauth-github'
+gem 'pry-rails'

@@ -2,7 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def auth_data
-    OpenStruct.new session[:auth]
+    if session[:auth].present?
+      OpenStruct.new session[:auth]
+    else
+      nil
+    end
   end
   helper_method :auth_data
 
@@ -17,7 +21,6 @@ class ApplicationController < ActionController::Base
       @_github = Github.new({
         :oauth_token      => auth_data.github.credentials.token
       })
-
     end
 
     @_github
