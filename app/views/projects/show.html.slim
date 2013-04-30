@@ -1,5 +1,19 @@
 h2 Project #{@project.name}
 
-ul
+= link_to 'Project List', projects_path
+
+
+table
+  tr
+    th Repo
+    th ID
+    th Subject
+    th State
+
   - @project.issues.each do |issue|
-    li= issue.name
+    tr
+      td= @project.name
+      td= issue.id
+      td= issue.title
+      td= issue.state
+
