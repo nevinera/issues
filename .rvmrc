@@ -2,3 +2,4 @@ rvm use 1.9.3@issues
 
 export GITHUB_KEY=778bce0ee81f90492542
 export GITHUB_SECRET=993e89d620f295ef87908ecd74ef8a5ff342cfbb
+export GITHUB_ORG=emcien

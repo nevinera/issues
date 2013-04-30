@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   def index
     if logged_in?
-      @projects = Project.all(github)
+      @projects = current_user.repos
     else
       @projects = []
     end

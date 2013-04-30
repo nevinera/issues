@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
   helper_method :logged_in?
 
 
+  def current_user
+    @_current_user ||= User.new(github)
+  end
+
   def github
     if @_github.blank?
       @_github = Github.new({
@@ -25,5 +29,4 @@ class ApplicationController < ActionController::Base
 
     @_github
   end
-  helper_method :github
 end
