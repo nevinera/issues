@@ -1,9 +1,10 @@
 class ProjectsController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
-    if logged_in?
-      @projects = current_user.repos
-    else
-      @projects = []
-    end
+    @projects = current_user.repos
+  end
+
+  def show
   end
 end

@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  def authenticate_user!
+    return if self.class == SessionsController
+    redirect_to '/auth/github' unless logged_in?
+  end
+
   def auth_data
     if session[:auth].present?
       OpenStruct.new session[:auth]

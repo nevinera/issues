@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    render :text => "FAILED"
+    render :text => "FAILED AUTH"
   end
 
   def destroy
