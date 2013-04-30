@@ -9,5 +9,5 @@ end
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :developer if Rails.env == "development"
-  provider :github, key, secret
+  provider :github, key, secret, :scope => "repo"
 end
