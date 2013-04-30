@@ -1,0 +1,5 @@
+h2 Project #{@project.name}
+
+ul
+  - @project.issues.each do |issue|
+    li= issue.name

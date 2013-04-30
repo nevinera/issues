@@ -5,4 +5,4 @@ table
     th Name
   - @projects.each do |p|
     tr
-      td= p.name
+      td= link_to p.name, project_path(p.name)

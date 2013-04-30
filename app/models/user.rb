@@ -9,4 +9,8 @@ class User
   def repos
     self.github.repos.list(:org => $organization)
   end
+
+  def repo(name)
+    Repo.new self.github, name
+  end
 end
