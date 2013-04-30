@@ -1,4 +1,10 @@
 class SessionsController < ApplicationController
+  def new
+    if logged_in?
+      redirect_to projects_path
+    end
+  end
+
   def create
     session[:auth] ||= {}
     session[:auth][:github] = request.env["omniauth.auth"]

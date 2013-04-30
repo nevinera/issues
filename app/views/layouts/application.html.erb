@@ -7,9 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% unless logged_in? %>
-    <a href='/auth/github'>Log In</a>
-  <% end %>
   <% if logged_in? %>
     <a href='/logout'>Log Out</a>
   <% end %>
